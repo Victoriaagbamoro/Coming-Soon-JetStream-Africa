@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+.container-body{
+    background-image: linear-gradient(to right bottom,#033dbbbd ,#061177b9 ) ,url("https://i.ibb.co/ydkTSCM/jet2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+} 
+
+.logo{
+    position: absolute;
+    left: 0px;
+    color: #ffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.navbar{
+    position: absolute;
+    right: 0px;
+    width: 260px;
+    height: 100%;
+    background-color: #ff6000;
+    opacity: 0.7;
+    text-align: center;
+    transition: 0.800s ease;
+}
+
+.navbar > .side-nav{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item{
+    display: flex;
+}
+
+.nav-item > .nav-link{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1em;
+    padding: 1.8em;
+    flex: 1;
+}
+
+.nav-item > .nav-link:hover{
+    background-color: #3442beb9;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.toggle-collapse{
+    float: left;
+    margin-left: -3.3em;
+    margin-top: .5em;
+    content: "";
+    outline: inherit;
+    border: 0px;
+    background: transparent;
+}
+
+/* Toggle-icon */
+.toggle-icon,
+.toggle-icon::before,
+.toggle-icon:after
+{
+    content: "";
+    width: 30px;
+    height: 3px;
+    position: fixed;
+    background-color: #ff6000;
+    border-radius: 2em;
+    border: 1px solid #ff6000;
+    cursor: pointer;
+    transition: 0.800s ease;
+    margin-top: 0.8em;
+
+}
+
+.toggle-icon::before{
+    position: absolute;
+    left: -1px;
+    margin-top: -0.8em;
+    /* width: 20px; */
+}
+
+.toggle-icon::after{
+    position: absolute;
+    left: -1px;
+    margin-top: 0.6em;
+    width: 20px;
+}
+
+.toggle-icon{
+    width: 15px;
+}
+
+.show .toggle-icon::after{ 
+    width: 30px;
+}
+
+.show .toggle-icon{
+    width: 30px;
+}
+
+.nav-item:last-child > .nav-link i{
+    padding: .5em;
+}
+
+.nav-item:hover:last-child > .nav-link{
+    background-color: #ff6000;
+    color: #ffffff;
+}
+
+
+/* Main */
+/* .main{
+    position: absolute;
+    bottom: 0;
+} */
+
+.text-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    
+}
+
+.text-area .heading{
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-family: Montserrat, sans-serif;
+}
+
+.text-area p{
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.text-area h3{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: bolder;
+}
+
+.countdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.countdown div{
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    margin: 5px;
+    opacity: 0.7;
+    background-color: #3c4596b9;
+}
+
+.countdown div:first-child {
+    background: #ff6000;
+}
+.countdown span{
+    display: block;
+    font-size: 25px;
+}
+
+/* Media Queries */
+@media(max-width: 650px){
+    .text-area .heading{
+        color: #ffffff;
+        font-size: 25px;
+        letter-spacing: 3px;
+        
+    }
+
+    .text-area h3{
+        color: #ffffff;
+        font-size: 30px;
+        
+    }
+
+    .navbar{
+        display: none;
+        
+    }
+
+    .countdown{
+        font-size: 30px;
+        flex-direction: column;
+    }
+    
+    .countdown div{
+        display: none;
+    }
+
+    .countdown div:first-child{
+        display: block;
+        width: 100%;
+        padding: 20px;
+    }
+} 
+
+@media(max-height: 600px){
+    .logo{
+        width: 20%;
+    }
+
+    p{
+        display: none;
+    }
+}
