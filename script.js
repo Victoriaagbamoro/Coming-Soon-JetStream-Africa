@@ -52,3 +52,5 @@ const intvl = setInterval(() =>{
     }
     
 }, 1000)
+
+
